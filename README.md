@@ -4,11 +4,11 @@ TODO: Write a project description
 
 ## Installation
 
-TODO: Describe the installation process
+`$ bundle install`
 
 ## Usage
 
-TODO: Write usage instructions
+`$ bundle exec rails server`
 
 ## Contributing
 
