@@ -14,29 +14,29 @@
 ActiveRecord::Schema.define(version: 20140418215526) do
 
   create_table "notes", force: :cascade do |t|
-    t.string   "name"
-    t.string   "text"
-    t.integer  "pad_id"
-    t.integer  "user_id"
+    t.string   "name",       limit: 255
+    t.string   "text",       limit: 255
+    t.integer  "pad_id",     limit: 4
+    t.integer  "user_id",    limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "notes", ["pad_id"], name: "index_notes_on_pad_id"
-  add_index "notes", ["user_id"], name: "index_notes_on_user_id"
+  add_index "notes", ["pad_id"], name: "index_notes_on_pad_id", using: :btree
+  add_index "notes", ["user_id"], name: "index_notes_on_user_id", using: :btree
 
   create_table "pads", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "user_id"
+    t.string   "name",       limit: 255
+    t.integer  "user_id",    limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "pads", ["user_id"], name: "index_pads_on_user_id"
+  add_index "pads", ["user_id"], name: "index_pads_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
-    t.string   "email"
-    t.string   "password_digest"
+    t.string   "email",           limit: 255
+    t.string   "password_digest", limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
