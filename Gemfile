@@ -43,3 +43,6 @@ gem 'bcrypt', '~> 3.1.2'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+# Use figaro to manage app configuration
+gem 'figaro', '~> 1.1'
