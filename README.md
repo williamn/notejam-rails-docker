@@ -4,7 +4,9 @@ TODO: Write a project description
 
 ## Installation
 
-`$ bundle install`
+1. Install the dependencies`$ bundle install`
+1. Rename `config/application.yml.example` to `config/application.yml`
+1. Change database configuration in `config/application.yml`
 
 ## Usage
 
